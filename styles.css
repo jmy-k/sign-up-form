@@ -1,0 +1,126 @@
+body, .sign-up, fieldset, .logo, .form{
+    display:flex;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.picture{
+    min-width: 40vw;
+    min-height: 100vh;
+    background-image: url("grassymountain.jpg");
+    background-size:cover;
+}
+
+.logo{
+    position:relative;
+    top:20vh;
+    max-width:inherit;
+    height:80px;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.7);
+    padding:10px;
+    
+}
+
+.logoname{
+    font-family: 'Courier New', Courier, monospace;
+    color:white;
+    font-size: 40px;
+    font-weight:bold;
+    letter-spacing: 0.2em;
+    margin:15px;
+}
+
+img{
+    display:flex;
+    max-width:auto;
+    object-fit: cover;
+    margin:8px;
+}
+
+.logoname{
+    display:flex;
+    align-items: center;
+    padding: 8px;
+}
+
+.formtext{
+    padding-left: 30px;
+    padding-bottom: 40px;
+    font-size: 24px;
+}
+
+
+.sign-up{
+    flex-direction: column; justify-content: center;
+    min-height:80vh;
+    background-color: #70829E;
+}
+
+.form{
+    min-width:60vw;
+    min-height:20vh;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.3);
+    background-color: #ACB2C6;
+}
+
+fieldset{
+    flex-flow: row wrap; justify-content: space-between; align-items: flex-top;
+    max-width:40vw;
+    padding: 20px;
+    border:none;
+}
+
+.input{
+    display:flex;
+    flex-flow:column wrap;
+    padding:3px;
+}
+
+input{
+    outline:none;
+    border-radius: 3px;
+    border:1px solid #264157;
+}
+
+input:focus{
+    outline:none;
+    border:1px solid #634327;
+    box-shadow: 2px 2px 3px  #634327;
+}
+
+input.invalid{
+    border: 1px solid red;
+}
+
+.login{
+    padding-left:30px;
+}
+
+.submit{
+    padding:10px;
+}
+
+button{
+    margin-left:30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width:200px;
+    height:40px;
+    border-radius: 5px;
+    border:none;
+    color:white;
+    background-color: #634327;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+button:hover{
+    border: 2px solid #634327;
+    color: #634327;
+    background-color:white;
+}
+
+.pwError{
+    min-height: 11px;
+    font-size: 10px;
+    color: red;
+}

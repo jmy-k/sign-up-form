@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset=”UTF-8”>
+   <title>Sign Up Form</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="picture">
+        <div class="logo">
+            <img src="logo.png" alt="" class="logoimage">
+            <span class="logoname">JULIA</span>
+        </div>
+    </div>
+
+    <div class="sign-up">
+        <span class="formtext">This not a real online service! Poop.<br> Sign up <em>now</em> to get started.<br><br>You <em>know</em> you want to.</span>
+        <form action="#">
+            <div class="form">
+                <fieldset novalidate>
+                    <div class="input">
+                        <label for="first_name">First Name</label>
+                        <input type="text" id="first_name" name="first_name" required>
+                    </div>
+                    <div class="input">
+                        <label for="last_name">Last Name</label>
+                        <input type="text" id="last_name" name="last_name" required>
+                    </div>
+                    <div class="input">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="input">
+                        <label for="phone">Phone Number</label>
+                        <input type="number" id="phone" name="phone" maxlength="10">
+                    </div>
+                    <div class="input">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="input">
+                        <label for="confirm_pass">Confirm Password</label>
+                        <input type="password" id="confirmpassword" name="password" required>
+                        <div class="pwError"></div>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="submit">
+                <button type="submit" id="create_account">Create Account</button>
+            </div>
+        </form>
+        <span class="login">Already have an account? <a href="#">Log in.</a></span>
+    </div>
+   <script>
+    const buttonSubmit = document.querySelector('button');
+    const passwordA = document.querySelector('#password');
+    const passwordB = document.querySelector('#confirmpassword');
+    const pwError = document.querySelector(".pwError");
+    passwordB.addEventListener('input',()=>{
+        console.log("hi");
+        if (passwordA.value !== passwordB.value && passwordB.value !==""){
+            passwordA.classList.add("invalid");
+            passwordB.classList.add("invalid");
+            pwError.textContent = "Passwords do not match";
+        }
+        else{
+            return
+        }
+    })
+   </script>
+</body>
+</html>
